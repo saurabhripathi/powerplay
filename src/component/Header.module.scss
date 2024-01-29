@@ -1,0 +1,21 @@
+.nav-container{
+    // width: 15%;
+    margin-bottom: -16px;
+    .list-container{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: start;
+    margin-left: -20px;
+    margin-top: 0px;
+    background-color: #80808014;
+    padding-bottom: 15px;
+    padding-top: 16px;
+    border-bottom: 1px solid #00000026;
+    .item{
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 16px;
+    }
+    }
+}

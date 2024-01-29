@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AppLayout from './component/Applayout'
+import {LoginComponent, ProductListsComponent, ProductDetailsComponent, CartComponent} from './lazyRoutes'
+import { Suspense } from 'react';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
+
+const router = createBrowserRouter([
+  { path: '/login', element:< Suspense>< LoginComponent /></Suspense>  },
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [{
+      path: '/list',
+      element: < Suspense>< ProductListsComponent /></Suspense> 
+    }, {
+      path: '/products/:id',
+      element: < Suspense>< ProductDetailsComponent /></Suspense> 
+    },
+    {
+      path: '/cart',
+      element: < Suspense>< CartComponent /></Suspense> 
+    }
+
+    ]
+  }])
 
 export default App;

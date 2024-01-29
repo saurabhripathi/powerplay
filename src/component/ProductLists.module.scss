@@ -1,0 +1,21 @@
+.product-list-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #80808014;
+}
+.card-wrapper{
+    width: 22%;
+    margin: 1.4%;
+    border: 1px solid #00000026;
+    border-radius: 5px;
+    background-color: white;
+}
+.count{
+    padding-left: 19px;
+    padding-top: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #80808014;
+}

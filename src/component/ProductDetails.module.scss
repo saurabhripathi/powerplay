@@ -1,0 +1,29 @@
+.product-detail-container{
+    padding-top: 16px;
+    background-color: #80808017;
+    padding-bottom: 32px;
+    height: 100vh;
+    // padding-bottom: 32px;
+    .product-detail{
+width: 35%;
+    margin: 16px auto;
+    border: 1px solid #00000026;
+    border-radius: 5px;
+    background-color: white;
+    }
+    
+}
+.cart{
+    display: flex;
+    justify-content: center;
+}
+.cart-btn{
+    margin-right: 12px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 5px;
+    background-color: #7fbaf052;
+    border: 1px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}

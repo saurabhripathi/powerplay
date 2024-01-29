@@ -1,0 +1,28 @@
+.cart-container{
+    background-color: #f5f5f5;
+    min-height: 100%;
+    padding: 16px 0px;
+    .cart-heading{
+        margin: auto;
+        margin-bottom: 16px;
+        width: 50%;
+        font-weight: 600;
+        display: flex;
+    justify-content: space-between;
+    }
+}
+.cart-items{
+    width: 50%;
+    margin: auto;
+    border: 1px solid #00000026; 
+    border-radius: 5px;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+    background-color: white;
+    .quantity{
+        margin-top: -10px;
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 12px;
+    }
+}

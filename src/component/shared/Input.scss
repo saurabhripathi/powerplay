@@ -1,0 +1,16 @@
+.input-control-container{
+    display: flex;
+    flex-direction: column;
+    .label{
+
+    }
+    .input-control{
+        padding: 16px;
+        outline: none;
+    }
+    .input-control:focus{
+        border: 1px solid #61dafb;
+
+    }
+
+}
