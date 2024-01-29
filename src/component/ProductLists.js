@@ -13,7 +13,7 @@ return <Shimmer />
     <div className = {classes["count"]}> {`Products(${productLists?.length || 0})`}</div>
     <div className = {classes["product-list-container"]}>
         {productLists?.length && productLists?.map((item, index)=>{
-            return <div key = {index} className = {classes["card-wrapper"]}>
+            return <div key = {`${index}-${item?.id}`} className = {classes["card-wrapper"]}>
             <ProductCard  item = {item}  />
             </div>
         })}

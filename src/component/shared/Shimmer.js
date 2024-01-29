@@ -15,8 +15,8 @@ const Shimmer = () => {
       </div>
     return (
         <div className = "shimmer-container"> 
-        {array.map((index)=>{
-            return <div  className = "item" key = {index}>
+        {array.map((item,index)=>{
+            return <div  className = "item" key = {`${index}` }>
                 {card}
             </div>
         })}
