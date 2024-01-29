@@ -44,9 +44,6 @@ export const withAddToCart = (ProductCard) => {
         let [quantityInput, setQuantityInput ]= useState("");
         const dispatch = useDispatch()
         const addToCartHandler = (e) => {
-            // if(quantityInput<=0){
-            //     return
-            // }
             dispatch(addToCart({ ...item, quantity: quantityInput }))
         }
         return <>

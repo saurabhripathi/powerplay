@@ -2,6 +2,7 @@ import Input from '../component/shared/Input'
 import { useForm } from "react-hook-form"
 import classes from '../component/Login.module.scss'
 import { useNavigate } from 'react-router'
+import {VALIDATION_MESSAGE} from '../utils/constant'
 const Login = ()=>{
     const { register, handleSubmit,  formState: { errors } } = useForm({mode: 'all'})
   const navigate =   useNavigate()
@@ -30,14 +31,14 @@ const Login = ()=>{
                 <Input  required = {validationForLoginFrom.email.required} errors = {errors} type = "email" placeholder = "Email" id = "email" name = "email"
                 register  = {register} validationSchema = {validationForLoginFrom.email}/>
                  {errors.email && errors.email.type === "required" && (
-            <p className= {classes["errorMsg"]}>Email is required.</p>
+            <p className= {classes["errorMsg"]}>{VALIDATION_MESSAGE.email[errors.email.type]}</p>
           )}
                 </div>
                 <div className = {classes["control"]}>
                 <Input required = {validationForLoginFrom.email.required}  errors = {errors} type = "password" placeholder = "Password" id = "password" name = "password"
                  validationSchema = {validationForLoginFrom.password} register  = {register} />
                  {errors.password && errors.password.type === "required" && (
-            <p className={classes["errorMsg"]}>Password is required.</p>
+            <p className={classes["errorMsg"]}>{VALIDATION_MESSAGE.password[errors.password.type]}</p>
           )}
                 </div>
             </div>

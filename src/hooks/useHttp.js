@@ -32,7 +32,7 @@ const useHttp = (url, config)=>{
         }
         
     }, [url, config])
-    // exporting this function for POST/PUT/PATCH request.
+    // exporting sendHttpRequest function for POST/PUT/PATCH request.
     return {data, isLoading, error, sendHttpRequest}
 }
 
