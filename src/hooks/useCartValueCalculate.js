@@ -5,7 +5,7 @@ const useCartValueCalculate = (cartItems)=>{
     useEffect(()=>{
         const value = calculateCartAmount(cartItems)
         setCartValue(value)
-    }, [])
+    }, [cartItems])
     return {cartValue}
 }
 export default useCartValueCalculate
